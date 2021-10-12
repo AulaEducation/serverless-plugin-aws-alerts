@@ -86,7 +86,7 @@ module.exports = {
         ReturnData: false,
       }, {
         Id: 'expr',
-        Expression: '((requests - errors - timeouts) / requests) * 100',
+        Expression: '((requests - IF((errors-timeouts)-3<1,0,(errors-timeouts))) / requests) * 100',
         Label: 'Availability',
       }],
       threshold: 99.9,
@@ -232,7 +232,7 @@ module.exports = {
           ReturnData: false,
         }, {
           Id: 'expr',
-          Expression: '((requests - errors) / requests) * 100',
+          Expression: '((requests - IF(errors-3<1,0,errors)) / requests) * 100',
           Label: 'Availability',
         }],
         threshold: 99.9,
