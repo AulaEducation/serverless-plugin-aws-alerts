@@ -1,6 +1,6 @@
 {
   "name": "@ublend-npm/serverless-plugin-aws-alerts",
-  "version": "1.7.0",
+  "version": "2.0.0",
   "description": "",
   "main": "src/index.js",
   "scripts": {
@@ -16,7 +16,7 @@
   "author": "John McKim <john@acloud.guru>",
   "license": "MIT",
   "peerDependencies": {
-    "serverless": "^1.12.0"
+    "serverless": "^3.26.0"
   },
   "dependencies": {
     "lodash": "^4.17.10"

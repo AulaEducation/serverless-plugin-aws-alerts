@@ -20,6 +20,12 @@ class AlertsPlugin {
     this.hooks = {
       'package:compileEvents': this.compile.bind(this),
     };
+
+    this.serverless.configSchemaHandler.defineFunctionProperties('aws', {
+      properties: {
+        alarms: { type: 'array' },
+      },
+    });
   }
 
   getConfig() {
