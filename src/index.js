@@ -24,7 +24,8 @@ class AlertsPlugin {
     this.serverless.configSchemaHandler.defineFunctionProperties('aws', {
       properties: {
         alarms: { type: 'array' },
-        inheritGlobalAlarms: { type: 'boolean' }
+        inheritGlobalAlarms: { type: 'boolean' },
+        alarmDLQName: { type: 'object' }
       },
     });
   }
