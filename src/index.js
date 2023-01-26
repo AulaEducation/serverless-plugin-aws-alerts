@@ -25,7 +25,9 @@ class AlertsPlugin {
       properties: {
         alarms: { type: 'array' },
         inheritGlobalAlarms: { type: 'boolean' },
-        alarmDLQName: { type: 'object' }
+        alarmDLQName: { type: 'object' },
+        alarmBucketName: { type: 'string' },
+        alarmBucketObjectsThreshold: { type: 'number' }
       },
     });
   }
