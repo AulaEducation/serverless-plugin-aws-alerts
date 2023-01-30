@@ -27,7 +27,10 @@ class AlertsPlugin {
         inheritGlobalAlarms: { type: 'boolean' },
         alarmDLQName: { type: 'object' },
         alarmBucketName: { type: 'string' },
-        alarmBucketObjectsThreshold: { type: 'number' }
+        alarmBucketObjectsThreshold: { type: 'number' },
+        alarmRedisCacheClusterId: { type: 'string' },
+        alarmRedisFreeMemoryThreshold: { type: 'number' },
+        cacheNodeId: { type: 'string' }
       },
     });
   }
