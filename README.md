@@ -9,6 +9,10 @@ A Serverless plugin to easily add CloudWatch alarms to functions
 ## Installation
 `npm i serverless-plugin-aws-alerts`
 
+## Publishing new versions
+New versions of this fork should be published from the `master` branch
+using `npm publish`. Remember to bump the package version as appropriate before publishing.
+
 ## Usage
 
 ```yaml
