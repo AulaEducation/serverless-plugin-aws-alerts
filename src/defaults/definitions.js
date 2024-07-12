@@ -27,7 +27,7 @@ module.exports = {
     datapointsToAlarm: 1,
     comparisonOperator: 'GreaterThanOrEqualToThreshold',
   },
-  functionAvailability: () => (functionName, serverless) => {
+  functionAvailability: definitions => (functionName, serverless) => {
     const namingProvider = serverless.getProvider('aws').naming;
     const funRef = namingProvider.getLambdaLogicalId(functionName);
 
@@ -94,6 +94,7 @@ module.exports = {
       datapointsToAlarm: 2,
       comparisonOperator: 'LessThanThreshold',
       treatMissingData: 'notBreaching',
+      ...definitions,
     };
   },
   functionDuration: {
